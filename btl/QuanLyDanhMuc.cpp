@@ -91,6 +91,10 @@ void QuanLyDanhMuc::themXeMay(XeMay* xemay) {// thêm thông tin một xe máy �
 			_brands[i].ThemMotXemay(xemay);
 		}
 	}
+
+	for (int i = 0; i < _brands.size(); i++) {
+		_brands[i].DanhSachCacSanPham();
+	}
 }
 
 

@@ -23,12 +23,12 @@ QuanLyDanhMuc inputDanhMuc() {
 	QuanLyDanhMuc store;
 	ifstream readerBrand;
 	
-	readerBrand.open("C:\\txt\\brands.txt", ios::out);
+	readerBrand.open("C:\\txt\\thongtin.txt", ios::out);
 
 	ifstream reader;
 	reader.open("C:\\txt\\xemay.txt", ios::out);
 
-	if (readerBrand.is_open() && reader.is_open()) {
+	if (readerBrand.is_open() || reader.is_open()) {
 		cout << "\nTHANH CONG";
 	}
 	else if (!readerBrand.is_open() || !reader.is_open()) {
@@ -59,7 +59,6 @@ QuanLyDanhMuc inputDanhMuc() {
 			}
 			MotorbikeBrand temp(buffer, tempMotorbike);
 			store.themTenHangXe(temp);
-
 		}
 		reader.close();
 		readerBrand.close();

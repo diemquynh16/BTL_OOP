@@ -100,6 +100,7 @@ void XeMay::setSLBan(int SL) {
 }
 
 void XeMay::input() {
+	
 	int line = 9;
 	gotoxy(30, line + 2);
 	cout << "------------Nhap cac thong tin cua xe may------------";
@@ -127,9 +128,6 @@ void XeMay::input() {
 	cin >> _soluong;
 
 	_soluongBan = 0;
-
-
-
 }
 
 void  XeMay::output() {

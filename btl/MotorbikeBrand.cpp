@@ -152,13 +152,13 @@ void MotorbikeBrand::SuaTenHangCuaCacXeMay(string tenhang) {
 }
 void MotorbikeBrand::fileout(string tenfile) {
 	ofstream filexuat;
-	filexuat.open("C:\\txt\\thongtin.txt");
+	filexuat.open("C:\\txt\\xemay.txt");
 	int line = 14;
 	for (int i = 0; i < _motorbikes.size(); i++) {
 		 filexuat << i + 1;
 		 filexuat << "|";
 		 filexuat << _motorbikes[i]->getTenHang();
-	 filexuat << "|";
+		 filexuat << "|";
 		 filexuat << _motorbikes[i]->getTenXe();
 		 filexuat << "|";
 		 filexuat << _motorbikes[i]->getLoaiXe();
@@ -173,8 +173,26 @@ void MotorbikeBrand::fileout(string tenfile) {
 		 filexuat << "|";
 		 filexuat << _motorbikes[i]->getSLBan();
 	}
+
+	filexuat.close();
 }
 void MotorbikeBrand::DanhSachCacSanPham() {
+	ofstream fileOut;
+	fileOut.open("C:\\txt\\xemay.txt");
+	for (int i = 0; i < _motorbikes.size(); i++) {
+		fileOut << i + 1;
+		fileOut<< _motorbikes[i]->getTenHang();
+		fileOut << _motorbikes[i]->getTenXe();
+		fileOut <<_motorbikes[i]->getLoaiXe();
+		fileOut << _motorbikes[i]->getCC();
+		fileOut << Tien(to_string(_motorbikes[i]->getGiaGoc()));
+		fileOut << Tien(to_string(_motorbikes[i]->getGiaBan()));
+		fileOut << _motorbikes[i]->getSL();
+		fileOut << _motorbikes[i]->getSLBan();
+	}
+	fileOut.close();
+
+
 	int line = 14;
 	gotoxy(0, line); cout << "STT  |  ";
 	gotoxy(8, line); cout << "Ten hang" << "   |   " << "Ten xe" << "   |   "
