@@ -1,0 +1,4 @@
+﻿  btl.cpp
+C:\Users\DIEM QUYNH\OneDrive\Máy tính\btl\btl\Motobike.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\DIEM QUYNH\OneDrive\Máy tính\btl\btl\btl.cpp(1045,53): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  btl.vcxproj -> C:\Users\DIEM QUYNH\OneDrive\Máy tính\btl\x64\Debug\btl.exe
